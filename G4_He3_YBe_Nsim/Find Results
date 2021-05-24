@@ -18,8 +18,6 @@ Searching 1 file for "He3"
    43  # relies on these scripts being in the current working directory.
    44  #
    45: set(myHe3A_SCRIPTS
-   46:   myHe3.out
-   47:   myHe3.in
    48    gui.mac
    49    init_vis.mac
    ..
