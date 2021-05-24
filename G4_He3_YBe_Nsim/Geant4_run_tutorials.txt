@@ -1,0 +1,65 @@
+
+// Example to run file example B3 
+
+// copy B3 folder from 
+
+/Users/madan/Geant4.10/geant4.10.05/examples/basic
+
+//make new floder Gent4_Example and place B3 folder on it
+
+cp -a /Users/madan/Geant4.10/geant4.10.05/examples/basic/B3 /Users/madan/Desktop/Gent4_Example
+
+// make new dir called B3-build
+
+mkdir B3-build
+cd /Users/madan/Desktop/Gent4_Example/B3-build
+gsource
+
+//Best
+cmake -DGeant4_DIR=/Users/madan/Geant4.10/geant4.10.05-install/lib/Geant4-10.5.0/ ../AmBe_He3
+
+//OR
+cmake -DCMAKE_INSTALL_PREFIX=/opt/geant4 -DGEANT4_USE_GDML=ON /Users/madan/Geant4.10/geant4.10.05-install/share /Users/madan/Desktop/Gent4_Example/B3
+
+//OR for B1
+
+cmake -DGeant4_DIR=path_to_Geant4_installation/lib[64]/Geant4-10.0.0/ /Users/madan/Desktop/Gent4_Example/B1
+
+
+make -j2
+
+--> run make -j2 each time when you edit the source code (.cc , .hh files etc)
+
+/Users/madan/Desktop/Gent4_Example/B3-build/B3b
+
+// then each time run with
+
+ ./exampleB3b
+
+ ./exampleB3b -m my.mac
+
+
+//link for you tube
+
+https://www.youtube.com/watch?v=vvi7VcugxbU
+
+
+//Andey's help
+Physics library (exampleB4a.cc)
+
+#include "FTFP_BERT_HP.hh"
+Befor it was #include "FTFP_BERT.hh"
+
+//For viewer
+
+cmake -DCMAKE_PREFIX_PATH=/usr/local/Cellar/qt/5.12.1/ ../geant4.10.05
+
+//to make a path for new library
+
+dhcp-visitor-220-71:AmBe_He3_build madan$ echo $PATH
+/Users/madan/Geant4.10/geant4.10.05-install/bin:/usr/local/Cellar/root/6.16.00/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
+dhcp-visitor-220-71:AmBe_He3_build madan$ echo PATH
+PATH
+dhcp-visitor-220-71:AmBe_He3_build madan$ echo $PATH
+/Users/madan/Geant4.10/geant4.10.05-install/bin:/usr/local/Cellar/root/6.16.00/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
+dhcp-visitor-220-71:AmBe_He3_build madan$ export PATH=$PATH:/Users/madan/Desktop/libnotify

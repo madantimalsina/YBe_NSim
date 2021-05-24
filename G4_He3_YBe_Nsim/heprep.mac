@@ -1,0 +1,24 @@
+# Macro file for the visualization setting for the initialization phase 
+# of the Arktis when running in interactive mode
+#
+
+
+#Initialize detector drawing
+/vis/open HepRepFile
+/vis/drawVolume
+/vis/viewer/flush
+
+#Prep GPS
+/run/initialize
+/tracking/verbose 1
+/gps/particle neutron
+/gps/pos/centre 0 0 -73 mm
+/gps/pos/type Point
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/ene/mono 2.2 MeV
+
+#Run some particles
+/vis/scene/add/trajectories
+#/analysis/setFileName Arktis_vis
+/run/beamOn 10

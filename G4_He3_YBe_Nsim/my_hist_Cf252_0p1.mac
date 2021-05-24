@@ -1,0 +1,180 @@
+# Macro file for my He3
+
+
+/run/initialize
+/run/verbose 1
+/random/setSeeds 238009 238117
+/tracking/verbose 0
+
+# list the existing physics processes
+/process/list
+
+/gps/particle neutron
+/gps/pos/centre 0 0 -37.25 mm
+/gps/pos/type Point
+/gps/ang/type iso
+
+/gps/ene/type Arb
+/gps/hist/type arb
+
+#/gps/hist/point <X> <Y> command is used to load the histogram,
+# where <X> is the energy in MeV and Y is the weight (or area) of the bin.
+
+/gps/hist/point 0 0
+/gps/hist/point 0.1 0.196855
+/gps/hist/point 0.2 0.260106
+/gps/hist/point 0.3 0.297603
+/gps/hist/point 0.4 0.320994
+/gps/hist/point 0.5 0.335193
+/gps/hist/point 0.6 0.34291
+/gps/hist/point 0.7 0.345861
+/gps/hist/point 0.8 0.345224
+/gps/hist/point 0.9 0.34185
+/gps/hist/point 1 0.336378
+/gps/hist/point 1.1 0.329302
+/gps/hist/point 1.2 0.321009
+/gps/hist/point 1.3 0.311806
+/gps/hist/point 1.4 0.301941
+/gps/hist/point 1.5 0.291614
+/gps/hist/point 1.6 0.280988
+/gps/hist/point 1.7 0.270196
+/gps/hist/point 1.8 0.259345
+/gps/hist/point 1.9 0.248524
+/gps/hist/point 2 0.237804
+/gps/hist/point 2.1 0.227243
+/gps/hist/point 2.2 0.216887
+/gps/hist/point 2.3 0.206772
+/gps/hist/point 2.4 0.196926
+/gps/hist/point 2.5 0.187371
+/gps/hist/point 2.6 0.178124
+/gps/hist/point 2.7 0.169194
+/gps/hist/point 2.8 0.16059
+/gps/hist/point 2.9 0.152315
+/gps/hist/point 3 0.14437
+/gps/hist/point 3.1 0.136753
+/gps/hist/point 3.2 0.129462
+/gps/hist/point 3.3 0.12249
+/gps/hist/point 3.4 0.115833
+/gps/hist/point 3.5 0.109483
+/gps/hist/point 3.6 0.103432
+/gps/hist/point 3.7 0.0976713
+/gps/hist/point 3.8 0.0921916
+/gps/hist/point 3.9 0.0869836
+/gps/hist/point 4 0.0820376
+/gps/hist/point 4.1 0.0773438
+/gps/hist/point 4.2 0.0728923
+/gps/hist/point 4.3 0.0686734
+/gps/hist/point 4.4 0.0646773
+/gps/hist/point 4.5 0.0608943
+/gps/hist/point 4.6 0.0573151
+/gps/hist/point 4.7 0.0539304
+/gps/hist/point 4.8 0.0507312
+/gps/hist/point 4.9 0.0477087
+/gps/hist/point 5 0.0448545
+/gps/hist/point 5.1 0.0421602
+/gps/hist/point 5.2 0.0396181
+/gps/hist/point 5.3 0.0372203
+/gps/hist/point 5.4 0.0349595
+/gps/hist/point 5.5 0.0328287
+/gps/hist/point 5.6 0.0308211
+/gps/hist/point 5.7 0.0289302
+/gps/hist/point 5.8 0.0271498
+/gps/hist/point 5.9 0.0254738
+/gps/hist/point 6 0.0238967
+/gps/hist/point 6.1 0.022413
+/gps/hist/point 6.2 0.0210176
+/gps/hist/point 6.3 0.0197056
+/gps/hist/point 6.4 0.0184723
+/gps/hist/point 6.5 0.0173132
+/gps/hist/point 6.6 0.0162242
+/gps/hist/point 6.7 0.0152013
+/gps/hist/point 6.8 0.0142406
+/gps/hist/point 6.9 0.0133386
+/gps/hist/point 7 0.0124919
+/gps/hist/point 7.1 0.0116972
+/gps/hist/point 7.2 0.0109515
+/gps/hist/point 7.3 0.0102519
+/gps/hist/point 7.4 0.00959573
+/gps/hist/point 7.5 0.00898034
+/gps/hist/point 7.6 0.00840332
+/gps/hist/point 7.7 0.00786237
+/gps/hist/point 7.8 0.00735533
+/gps/hist/point 7.9 0.00688014
+/gps/hist/point 8 0.00643488
+/gps/hist/point 8.1 0.00601773
+/gps/hist/point 8.2 0.00562698
+/gps/hist/point 8.3 0.005261
+/gps/hist/point 8.4 0.00491828
+/gps/hist/point 8.5 0.00459739
+/gps/hist/point 8.6 0.00429698
+/gps/hist/point 8.7 0.00401577
+/gps/hist/point 8.8 0.00375258
+/gps/hist/point 8.9 0.00350629
+/gps/hist/point 9 0.00327584
+/gps/hist/point 9.1 0.00306024
+/gps/hist/point 9.2 0.00285855
+/gps/hist/point 9.3 0.0026699
+/gps/hist/point 9.4 0.00249348
+/gps/hist/point 9.5 0.0023285
+/gps/hist/point 9.6 0.00217424
+/gps/hist/point 9.7 0.00203002
+/gps/hist/point 9.8 0.0018952
+/gps/hist/point 9.9 0.00176919
+/gps/hist/point 10 0.00165141
+/gps/hist/point 10.1 0.00154135
+/gps/hist/point 10.2 0.00143851
+/gps/hist/point 10.3 0.00134242
+/gps/hist/point 10.4 0.00125265
+/gps/hist/point 10.5 0.0011688
+/gps/hist/point 10.6 0.00109047
+/gps/hist/point 10.7 0.00101732
+/gps/hist/point 10.8 0.000949002
+/gps/hist/point 10.9 0.000885208
+/gps/hist/point 11 0.000825643
+/gps/hist/point 11.1 0.000770031
+/gps/hist/point 11.2 0.000718115
+/gps/hist/point 11.3 0.000669653
+/gps/hist/point 11.4 0.000624418
+/gps/hist/point 11.5 0.0005822
+/gps/hist/point 11.6 0.0005428
+/gps/hist/point 11.7 0.000506034
+/gps/hist/point 11.8 0.000471727
+/gps/hist/point 11.9 0.000439718
+/gps/hist/point 12 0.000409855
+/gps/hist/point 12.1 0.000381997
+/gps/hist/point 12.2 0.00035601
+/gps/hist/point 12.3 0.000331771
+/gps/hist/point 12.4 0.000309164
+/gps/hist/point 12.5 0.00028808
+/gps/hist/point 12.6 0.000268419
+/gps/hist/point 12.7 0.000250084
+/gps/hist/point 12.8 0.000232989
+/gps/hist/point 12.9 0.000217051
+/gps/hist/point 13 0.000202191
+/gps/hist/point 13.1 0.000188338
+/gps/hist/point 13.2 0.000175425
+/gps/hist/point 13.3 0.000163389
+/gps/hist/point 13.4 0.00015217
+/gps/hist/point 13.5 0.000141714
+/gps/hist/point 13.6 0.00013197
+/gps/hist/point 13.7 0.000122889
+/gps/hist/point 13.8 0.000114428
+/gps/hist/point 13.9 0.000106543
+/gps/hist/point 14 9.91975e-05
+/gps/hist/point 14.1 9.23535e-05
+/gps/hist/point 14.2 8.59775e-05
+/gps/hist/point 14.3 8.00379e-05
+/gps/hist/point 14.4 7.45051e-05
+/gps/hist/point 14.5 6.93514e-05
+/gps/hist/point 14.6 6.45513e-05
+/gps/hist/point 14.7 6.00806e-05
+/gps/hist/point 14.8 5.5917e-05
+/gps/hist/point 14.9 5.20396e-05
+/gps/hist/point 15 4.84289e-05
+
+
+/gps/hist/inter Lin
+
+/run/printProgress 10000
+/analysis/setFileName He3_2p5inch_Cf252_1m
+/run/beamOn 1000000

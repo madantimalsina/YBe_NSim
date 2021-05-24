@@ -1,0 +1,22 @@
+# Macro file for my He3
+
+
+/run/initialize
+/tracking/verbose 1
+
+# list the existing physics processes
+/process/list
+
+# isotropic neutrons 10MeV
+/gps/particle neutron
+/gps/pos/centre 0 0 -73 mm
+#/gps/ang/mintheta 176 deg
+
+/gps/pos/type Point
+/gps/ang/type iso
+#/gps/ene/type Mono
+/gps/ene/mono 10 MeV
+#/gps/energy 10 MeV
+/run/printProgress 1
+#/analysis/setFileName test
+/run/beamOn 50000

@@ -1,0 +1,47 @@
+////For viewer QT
+
+cmake -DCMAKE_PREFIX_PATH=/usr/local/Cellar/qt/5.12.1/ ../geant4.10.05
+
+//cmake
+cmake -DGeant4_DIR=/Users/madan/Geant4.10/geant4.10.05-install/lib/Geant4-10.5.0/ ../He3_2p5in_MT_AmBe_Air
+
+//make
+
+make -j2
+
+//To install after change in the code
+//Go to the build folder
+
+cd /Users/madan/Geant4.10/geant4.10.05-build
+make -j2
+make install
+
+// To run using CVMFS
+
+1) mount cvmfs 
+mlz or sudo mount -t cvmfs lz.opensciencegrid.org /cvmfs/lz.opensciencegrid.org
+
+2) mount soft
+ms (sudo mount -t cvmfs sft.cern.ch /cvmfs/sft.cern.ch)
+
+3) source 
+
+source /cvmfs/lz.opensciencegrid.org/geant4/geant4.10.03.p02/bin/geant4.sh
+
+4) make
+ /cvmfs/lz.opensciencegrid.org/cmake/cmake-3.3.2-Linux-x86_64/bin/cmake -DGeant4_DIR=/cvmfs/lz.opensciencegrid.org/geant4/geant4.10.03.p02/lib64/Geant4-10.3.2/ ../src/He3_2p5in_MT/
+
+
+//cmake -DGeant4_DIR=/cvmfs/lz.opensciencegrid.org/geant4/geant4.10.03.p02/lib64/Geant4-10.3.2 ../He3_2p5in_MT
+
+make
+
+//Shows ERROR (make[2]: *** No rule to make target `/usr/lib64/libGLU.so', needed by `myHe3'.  Stop.)
+
+//Then try
+
+ brew install linuxbrew/xorg/xorg linuxbrew/xorg/mesa vtk
+
+
+
+

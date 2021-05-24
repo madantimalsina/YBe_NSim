@@ -1,0 +1,24 @@
+# Macro file for my He3
+# 2" moderator thickness
+
+/run/initialize
+/run/verbose 1
+/random/setSeeds 238009 238117
+/tracking/verbose 0
+
+# list the existing physics processes
+/process/list
+
+# isotropic neutrons 10MeV
+/gps/particle neutron
+#position same as 2.5" MT just to check solid angle
+/gps/pos/centre 0 0 -18.365 cm
+#/gps/ang/mintheta 0 deg
+
+/gps/pos/type Point
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/ene/mono 0.152 MeV
+/run/printProgress 10000
+/analysis/setFileName He3_1p5inch_YBe_1m_Tungsten_SAir
+/run/beamOn 1000000

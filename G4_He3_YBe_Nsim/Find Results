@@ -1,0 +1,37 @@
+Searching 1 file for "He3"
+
+/Users/madan/Desktop/MyG4_SDSMT_setup/CMakeLists.txt:
+    4  #
+    5  cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
+    6: project(He3)
+    7  
+    8  #----------------------------------------------------------------------------
+    .
+   35  # Add the executable, and link it to the Geant4 libraries
+   36  #
+   37: add_executable(myHe3 myHe3.cc ${sources} ${headers})
+   38: target_link_libraries(myHe3 ${Geant4_LIBRARIES})
+   39  
+   40  #----------------------------------------------------------------------------
+   41  # Copy all scripts to the build directory, i.e. the directory in which we
+   42: # build He3. This is so that we can run the executable directly because it
+   43  # relies on these scripts being in the current working directory.
+   44  #
+   45: set(myHe3A_SCRIPTS
+   46:   myHe3.out
+   47:   myHe3.in
+   48    gui.mac
+   49    init_vis.mac
+   ..
+   55    )
+   56  
+   57: foreach(_script ${myHe3A_SCRIPTS})
+   58    configure_file(
+   59      ${PROJECT_SOURCE_DIR}/${_script}
+   ..
+   66  # Install the executable to 'bin' directory under CMAKE_INSTALL_PREFIX
+   67  #
+   68: install(TARGETS myHe3 DESTINATION bin)
+   69  
+
+10 matches in 1 file
